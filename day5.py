@@ -1,4 +1,6 @@
 import copy
+from time import time
+start_time = int(round(time() * 1000))
 
 with open('day5.txt') as f:
     lines = f.read()
@@ -33,6 +35,8 @@ for m in movements_raw.split("\n"):
 
 movements2 = movements.copy()
 
+print(f'Parsing data: {int(round(time() * 1000)) - start_time}ms')
+
 for move in movements:
     a, f, t = move
 
@@ -57,5 +61,6 @@ for x in crates:
 for x in crates2:
     part2 += x[-1:][0]
 
-print(part1)
+print(f'{part1}')
 print(part2)
+print(f'Total running time: {int(round(time() * 1000)) - start_time}ms')
