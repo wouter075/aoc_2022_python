@@ -39,5 +39,3 @@ for line in lines:
 
 print(part1)
 print(part2)
-
-
