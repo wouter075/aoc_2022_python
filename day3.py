@@ -18,7 +18,6 @@ for line in lines:
         prio += 58
     part1 += prio
 
-
 # part 2
 elf_groups = [lines[x:x+3] for x in range(0, len(lines), 3)]
 for group in elf_groups:
@@ -27,6 +26,7 @@ for group in elf_groups:
         if c in group[1] and c in group[2]:
             both = c
             break
+
     prio = ord(both) - 96
     if prio < 0:
         prio += 58
